@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Hamburger</title>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="box">
+            <h1>Order Hamburger</h1>
+            <form method="POST" action="processHamburger.py" enctype="multipart/form-data">
+                <fieldset>
+                    <legend><span>Hamburger type</span></legend>
+                    <input type="radio" name="type" value="beef"><span>Beef</span><br/>
+                    <input type="radio" name="type" value="chicken"><span>Chicken</span><br/>
+                    <input type="radio" name="type" value="rib"><span>Rib</span><br/>
+                    <input type="radio" name="type" value="vegetarian"><span>Vegetarian</span><br/>
+                </fieldset>
+
+                <fieldset>
+                    <legend><span>Hamburger bread type</span></legend>
+                    <input type="radio" name="bread-type" value="normalbun"><span>Normal bun</span><br/>
+                    <input type="radio" name="bread-type" value="ciabatta"><span>Ciabatta</span><br/>
+                    <input type="radio" name="bread-type" value="agnusbun"><span>Agnus bun</span><br/>
+                </fieldset>
+
+                <fieldset>
+                    <legend><span>Hamburger Toppings</span></legend>
+                    <input type="checkbox" name="cheese" value="cheese"><span>Cheese</span></br>
+                    <input type="checkbox" name="tomato" value="tomato"><span>Tomato</span></br>
+                    <input type="checkbox" name="egg" value="egg"><span>Egg</span></br>
+                </fieldset>
+
+                <fieldset>
+                    <legend><span>Program</span></legend>
+                    <select name="program">
+                        <option value="no-program"><span>No program</span></option>
+                        <option value="yes-program"><span>BurgerCO Points</span></option>
+                    </select>
+                </fieldset>
+                <input class="btn" type="submit" value="Sumbit">
+            </form>
+        </div>
+    </body>
+
+    <style>
+         * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: #efefef;
+            background: #101010;
+        }
+
+        fieldset {
+            border-radius: 10px;
+            border: 1px solid #3f3f3f;
+            margin: 0px 20px 20px 20px;
+            background: #2b2b2b;
+        }
+
+        input {
+            margin: 5px 15px 10px 10px;
+        }
+
+        input:focus, textarea:focus, select:focus{
+            outline: none;
+        }
+        
+        span {
+            opacity: 80%;
+        }
+
+        select {
+            color: #efefef;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 93%;
+            border: 1px solid #3f3f3f;
+            background: #1b1b1b;
+        }
+
+        .box {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            background: #222222;
+            border: 1px solid #3f3f3f;
+        }
+
+        .box h1 {
+            color: #efefef;
+            text-transform: uppercase;
+            opacity: 80%;
+            margin: 10px 20px 10px 20px;
+        }
+
+        .btn {
+            opacity: 70%;
+            color: #efefef;
+            padding: 10px;
+            margin: 0px 0px 20px 20px;
+            border-radius: 10px;
+            width: 88%;
+            border: 1px solid #3f3f3f;
+            background: -webkit-linear-gradient(bottom, #222222, #2e2e2e)
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            animation: 0.5s forwards hAnimation;
+        }
+
+        @keyframes hAnimation {
+            0%{
+                opacity: 70%;
+            } 100% {
+                opacity: 100%;
+            }
+        }
+
+    </style>
+</html>

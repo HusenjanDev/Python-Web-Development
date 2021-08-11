@@ -3,19 +3,16 @@
     <head>
         <title>Login Panel</title>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="stylesheet.css"> -->
     </head>
-
+    
     <body>
         <div class="box">
-            <h1>Login Panel</h1>
-            <form method="POST" action="processLogin.py">
-                <p>Username</p>
-                <input type="text" name="name">
-                <p>Password</p>
-                <input type="password" name="password">
-                <br/><br/>
-                <input class="login-btn" type="submit" value="Login">
-            </form>
+            <h1>Projects</h1>
+            <ul class="list">
+                <li class="list-item"><a href="login.html">Login Panel</a></li>
+                <li class="list-item"><a href="orderhamburger.html">Order Hamburger</a></li>
+            </ul>
         </div>
     </body>
 
@@ -28,7 +25,6 @@
         body {
             font-family: 'Open Sans', sans-serif;
             font-size: 14px;
-            color: #efefef;
             background: #101010;
         }
 
@@ -36,24 +32,12 @@
             list-style-type: none;
         }
 
-        input {
-            color: #efefef;
-            width: 97%;
-            border: 1px solid #3f3f3f;
-            background: #1b1b1b;
-            border-radius: 5px;
-            padding: 4px;
-        }
-
-        input:focus, textarea:focus, select:focus{
-            outline: none;
-        }
-
         .box {
             position: fixed;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            text-align: center;
             border-radius: 10px;
             background: #222222;
             border: 1px solid #3f3f3f;
@@ -66,32 +50,27 @@
             margin: 10px 20px 10px 20px;
         }
 
-        .box form {
-            margin: 10px 20px 20px 20px;
+        .list-item a {
+            color: #efefef;
+            opacity: 50%;
+            text-decoration: none;
         }
 
-        .box form p {
-            padding-bottom: 4px;
-            opacity: 90%;
+        .list-item {
+            margin-bottom: 10px;
         }
 
-        .login-btn {
-            width: 102%;
-            padding: 8px;
-            opacity: 70%;
-            background: -webkit-linear-gradient(bottom, #222222, #2e2e2e)
-        }
-
-        .login-btn:hover {
-            cursor: pointer;
+        /* Hover effects */
+        .list-item a:hover {
             animation: 0.5s forwards hAnimation;
         }
 
+        /* Animations */
         @keyframes hAnimation {
             0%{
-                opacity: 70%;
+                opacity: 50%;
             } 100% {
-                opacity: 100%;
+                opacity: 90%;
             }
         }
 
